@@ -8,5 +8,20 @@ namespace Bombones2025TP03.Entidades
 {
     public class TipoDePago
     {
+        public int FormaDePagoId { get; set; }
+        public string Descripcion { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return $"{Descripcion}";
+        }
+        public TipoDePago Clonar()
+        {
+            return new TipoDePago
+            {
+                FormaDePagoId = FormaDePagoId,
+                Descripcion = Descripcion
+            };
+        }
     }
 }

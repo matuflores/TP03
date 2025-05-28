@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Bombones2025TP03.DatosSql\Bombones2025TP03.DatosSql.csproj" />
+  </ItemGroup>
+
 </Project>
