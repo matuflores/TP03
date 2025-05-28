@@ -28,76 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnCancelar = new Button();
+            components = new System.ComponentModel.Container();
             btnOk = new Button();
+            btnCancelar = new Button();
+            label1 = new Label();
             textBoxAFiltrar = new TextBox();
-            labelFiltro = new Label();
+            errorProviderFiltro = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProviderFiltro).BeginInit();
             SuspendLayout();
+            // 
+            // btnOk
+            // 
+            btnOk.Image = Properties.Resources.OK40;
+            btnOk.Location = new Point(104, 69);
+            btnOk.Name = "btnOk";
+            btnOk.Size = new Size(75, 65);
+            btnOk.TabIndex = 0;
+            btnOk.Text = "OK";
+            btnOk.TextImageRelation = TextImageRelation.ImageAboveText;
+            btnOk.UseVisualStyleBackColor = true;
+            btnOk.Click += btnOk_Click;
             // 
             // btnCancelar
             // 
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Image = Properties.Resources.CANCEL40;
-            btnCancelar.Location = new Point(369, 67);
+            btnCancelar.Image = Properties.Resources.OK40;
+            btnCancelar.Location = new Point(355, 69);
             btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(80, 66);
-            btnCancelar.TabIndex = 7;
+            btnCancelar.Size = new Size(75, 65);
+            btnCancelar.TabIndex = 1;
             btnCancelar.Text = "CANCELAR";
             btnCancelar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // btnOk
+            // label1
             // 
-            btnOk.FlatStyle = FlatStyle.Flat;
-            btnOk.Image = Properties.Resources.OK40;
-            btnOk.Location = new Point(82, 67);
-            btnOk.Name = "btnOk";
-            btnOk.Size = new Size(80, 66);
-            btnOk.TabIndex = 6;
-            btnOk.Text = "OK";
-            btnOk.TextImageRelation = TextImageRelation.ImageAboveText;
-            btnOk.UseVisualStyleBackColor = true;
-            btnOk.Click += this.btnOk_Click;
+            label1.AutoSize = true;
+            label1.Location = new Point(70, 27);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 15);
+            label1.TabIndex = 2;
+            label1.Text = "Ingrese texto a filtrar:";
             // 
             // textBoxAFiltrar
             // 
-            textBoxAFiltrar.Location = new Point(207, 23);
+            textBoxAFiltrar.Location = new Point(193, 24);
             textBoxAFiltrar.Name = "textBoxAFiltrar";
-            textBoxAFiltrar.Size = new Size(242, 23);
-            textBoxAFiltrar.TabIndex = 5;
-            textBoxAFiltrar.TextChanged += this.textBoxTipoDePago_TextChanged;
+            textBoxAFiltrar.Size = new Size(237, 23);
+            textBoxAFiltrar.TabIndex = 3;
             // 
-            // labelFiltro
+            // errorProviderFiltro
             // 
-            labelFiltro.AutoSize = true;
-            labelFiltro.Location = new Point(82, 26);
-            labelFiltro.Name = "labelFiltro";
-            labelFiltro.Size = new Size(119, 15);
-            labelFiltro.TabIndex = 4;
-            labelFiltro.Text = "Ingrese texto a Filtrar:";
-            labelFiltro.Click += this.labelTipoDePago_Click;
+            errorProviderFiltro.ContainerControl = this;
             // 
             // FrmFiltrar
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(531, 156);
+            Controls.Add(textBoxAFiltrar);
+            Controls.Add(label1);
             Controls.Add(btnCancelar);
             Controls.Add(btnOk);
-            Controls.Add(textBoxAFiltrar);
-            Controls.Add(labelFiltro);
             Name = "FrmFiltrar";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmFiltrar";
+            ((System.ComponentModel.ISupportInitialize)errorProviderFiltro).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button btnCancelar;
         private Button btnOk;
+        private Button btnCancelar;
+        private Label label1;
         private TextBox textBoxAFiltrar;
-        private Label labelFiltro;
+        private ErrorProvider errorProviderFiltro;
     }
 }

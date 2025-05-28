@@ -1,3 +1,5 @@
+using Bombones2025TP03.Servicios;
+
 namespace Bombones2025TP03.Windows
 {
     internal static class Program
@@ -11,7 +13,8 @@ namespace Bombones2025TP03.Windows
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new FrmTiposDePago());
+            TipoDePagoServicio tipoDePagoServicio=new TipoDePagoServicio();
+            Application.Run(new FrmTiposDePago(tipoDePagoServicio));
         }
     }
 }

@@ -28,10 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             labelTipoDePago = new Label();
             textBoxTipoDePago = new TextBox();
             btnOk = new Button();
             btnCancelar = new Button();
+            errorProviderTipoPagoAE = new ErrorProvider(components);
+            ((System.ComponentModel.ISupportInitialize)errorProviderTipoPagoAE).BeginInit();
             SuspendLayout();
             // 
             // labelTipoDePago
@@ -61,6 +64,7 @@
             btnOk.Text = "OK";
             btnOk.TextImageRelation = TextImageRelation.ImageAboveText;
             btnOk.UseVisualStyleBackColor = true;
+            btnOk.Click += btnOk_Click;
             // 
             // btnCancelar
             // 
@@ -73,6 +77,11 @@
             btnCancelar.Text = "CANCELAR";
             btnCancelar.TextImageRelation = TextImageRelation.ImageAboveText;
             btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
+            // errorProviderTipoPagoAE
+            // 
+            errorProviderTipoPagoAE.ContainerControl = this;
             // 
             // FrmTiposDePagoAE
             // 
@@ -84,7 +93,9 @@
             Controls.Add(textBoxTipoDePago);
             Controls.Add(labelTipoDePago);
             Name = "FrmTiposDePagoAE";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmTiposDePagoAE";
+            ((System.ComponentModel.ISupportInitialize)errorProviderTipoPagoAE).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -95,5 +106,6 @@
         private TextBox textBoxTipoDePago;
         private Button btnOk;
         private Button btnCancelar;
+        private ErrorProvider errorProviderTipoPagoAE;
     }
 }

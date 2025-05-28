@@ -198,6 +198,7 @@
             ClientSize = new Size(700, 338);
             Controls.Add(splitContainer1);
             Name = "FrmTiposDePago";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmTiposDePago";
             Load += FrmTiposDePago_Load;
             splitContainer1.Panel1.ResumeLayout(false);
