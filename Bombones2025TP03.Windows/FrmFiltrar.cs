@@ -1,5 +1,4 @@
-﻿using Bombones2025TP03.Entidades;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,21 +10,21 @@ using System.Windows.Forms;
 
 namespace Bombones2025TP03.Windows
 {
-    public partial class FrmTiposDePagoAE : Form
+    public partial class FrmFiltrar : Form
     {
-        public FrmTiposDePagoAE()
+        public FrmFiltrar()
         {
             InitializeComponent();
         }
 
-        internal TipoDePago? GetTipoDePago()
+        internal string? GetTexto()
         {
             throw new NotImplementedException();
         }
 
-        internal void SetTipoDePago(TipoDePago tipoPagoEditar)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+
         }
     }
 }
